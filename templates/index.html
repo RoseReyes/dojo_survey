@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/survey.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div id="wrapper">
+        <form action='/result' method='post' class="surveyformat">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class ="red">{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+            <p>Your Name:<input class="input" type="text"  name="name"></p>
+            <p>Dojo Location:
+                <select name="location" class="input">
+                    <option value="Seattle">Seattle</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="New York">New York</option>
+                </select>
+            </p>
+            <p>Favorite Language:
+                <select name="language" class="input">
+                    <option value="javascript">JavaScript</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="python">Python</option>
+                </select>
+            </p>
+            <p>Comment:</p>
+            <textarea class="description" name="comment"></textarea>
+            <p><input type="submit" value="Submit" name="survey"></p>
+        </form>
+    </div>  
+</body>
+</html>

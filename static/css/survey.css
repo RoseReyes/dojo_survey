@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+#wrapper {
+    height: 360px;
+    width:  310px;
+    margin: 0 auto;
+    border: 2px solid black;
+    padding: 5px;
+ }
+ .surveyformat {
+     padding: 5px;
+ }
+ .input {
+     width: 150px;
+     height: 25px;
+     margin: 5px;
+ }
+ textarea {
+     width: 290px;
+     height: 150px;
+     margin-top: 10px;
+ }
+ .red {
+     color: red;
+     font-size: 10px;
+ }
+ hr {
+    width: 300px;
+    color: grey;
+ }
+ p {
+     margin-top: 5px;
+ }
+ .description {
+     word-wrap: break-word;
+ }
+
